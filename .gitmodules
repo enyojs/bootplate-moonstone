@@ -1,0 +1,12 @@
+[submodule "lib/moonstone"]
+	path = lib/moonstone
+	url = git@github.com:enyojs/moonraker.git
+[submodule "lib/spotlight"]
+	path = lib/spotlight
+	url = git@github.com:enyojs/spotlight.git
+[submodule "lib/layout"]
+	path = lib/layout
+	url = git@github.com:enyojs/layout.git
+[submodule "enyo"]
+	path = enyo
+	url = git@github.com:enyojs/enyo.git
