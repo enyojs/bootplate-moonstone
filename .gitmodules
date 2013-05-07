@@ -10,3 +10,6 @@
 [submodule "enyo"]
 	path = enyo
 	url = git@github.com:enyojs/enyo.git
+[submodule "lib/ilib"]
+	path = lib/ilib
+	url = git@github.com:enyojs/enyo-ilib.git
