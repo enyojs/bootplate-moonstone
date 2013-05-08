@@ -1,6 +1,6 @@
 [submodule "lib/moonstone"]
 	path = lib/moonstone
-	url = git@github.com:enyojs/moonraker.git
+	url = git@github.com:enyojs/moonstone.git
 [submodule "lib/spotlight"]
 	path = lib/spotlight
 	url = git@github.com:enyojs/spotlight.git
