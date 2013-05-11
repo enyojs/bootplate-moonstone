@@ -16,3 +16,6 @@
 [submodule "lib/webos"]
 	path = lib/webos
 	url = ../enyo-webos.git
+[submodule "lib/ilib"]
+	path = lib/ilib
+	url = git@github.com:enyojs/enyo-ilib.git
