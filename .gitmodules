@@ -18,4 +18,4 @@
 	url = ../enyo-webos.git
 [submodule "lib/ilib"]
 	path = lib/ilib
-	url = ..//enyo-ilib.git
+	url = ../enyo-ilib.git
