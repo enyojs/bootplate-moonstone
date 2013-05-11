@@ -1,22 +1,26 @@
 enyo.depends(
-	// layout support
+	// Cordova (PhoneGap) library
+	"$lib/cordova",
+	// webOS-specific kind library
+	"$lib/webos",
+	// Layout library
 	"$lib/layout",
-	// language support
+	// Internationalization library
 	"$lib/ilib",
-	// moonstone library support
+	// Moonstone UI library
 	"$lib/moonstone",
-	// spotlight support for tv applications
+	// Focus support library for TV applications
 	"$lib/spotlight",
-	// css/less style files
+	// CSS/LESS style files
 	"style",
-	// model and data definitions
+	// Model and data definitions
 	"models",
-	// controller kinds for the application(s)
+	// Controller kinds for the application(s)
 	"controllers",
-	// view kind definitions
+	// View kind definitions
 	"views",
-	// application kind definitions
+	// Application kind definitions
 	"apps",
-	// include our default entry point
+	// Include our default entry point
 	"start.js"
 );
