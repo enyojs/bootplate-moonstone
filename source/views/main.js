@@ -9,8 +9,7 @@ enyo.kind({
 	}],
 	components: [
 		{kind: "enyo.Spotlight"},
-		{content: "Your content here"},
-		{kind: "moon.Spinner"}
+		{content: "Your content here"}
 	],
 	headerComponents: [
 		{kind: "moon.IconButton", src: "assets/icon-like.png"}
