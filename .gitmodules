@@ -10,12 +10,12 @@
 [submodule "enyo"]
 	path = enyo
 	url = ../enyo.git
-[submodule "lib/cordova"]
-	path = lib/cordova
+[submodule "lib/enyo-cordova"]
+	path = lib/enyo-cordova
 	url = ../enyo-cordova.git
-[submodule "lib/webos"]
-	path = lib/webos
+[submodule "lib/enyo-webos"]
+	path = lib/enyo-webos
 	url = ../enyo-webos.git
-[submodule "lib/ilib"]
-	path = lib/ilib
+[submodule "lib/enyo-ilib"]
+	path = lib/enyo-ilib
 	url = ../enyo-ilib.git
