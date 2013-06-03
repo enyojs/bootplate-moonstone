@@ -1,17 +1,9 @@
 enyo.kind({
-	name: "MyApp.MainView",
-	kind: "moon.Panel",
-	classes: "moon main-view",
-	controller: ".app.controllers.messageController",
-	bindings: [{
-		from: ".controller.message",
-		to: ".title"
-	}],
+	name: "sample.MainView",
+	kind: "enyo.View",
+	classes: "sample-mainview moon",
 	components: [
 		{kind: "enyo.Spotlight"},
-		{content: "Your content here"}
-	],
-	headerComponents: [
-		{kind: "moon.IconButton", src: "assets/icon-like.png"}
+		{name: "panels", kind: "sample.Panels"}
 	]
 });

@@ -1,3 +1,11 @@
 enyo.depends(
-	"models.js"
+	"source.js",
+	"model.js",
+	"artist.js",
+	"artist_search.js",
+	"artist_collection.js",
+	"album.js",
+	"album_collection.js",
+	"track.js",
+	"track_collection.js"
 );

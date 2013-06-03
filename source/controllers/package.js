@@ -1,3 +1,4 @@
 enyo.depends(
-	"controllers.js"
+	"controllers.js",
+	"router.js"
 );
