@@ -1,9 +1,10 @@
 enyo.depends(
-	"main.js",
-	"panels.js",
-	"panel.js",
-	"artists_panel.js",
-	"artist_panel.js",
-	"album_panel.js",
-	"item.js"
+	"Main.js",
+	"Panels.js",
+	"Panel.js",
+	"SearchBox.js",
+	"SearchPanel.js",
+	"ArtistPanel.js",
+	"AlbumPanel.js",
+	"Item.js"
 );

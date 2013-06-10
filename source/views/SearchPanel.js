@@ -1,9 +1,11 @@
 enyo.kind({
-	name: "sample.ArtistsPanel",
+	name: "sample.SearchPanel",
 	kind: "sample.Panel",
-	title: "Artists",
-	titleBelow: "From the Free Music Archive",
-	headerComponents: [],
+	title: "Search",
+	titleBelow: "Using the Discogs API",
+	headerComponents: [
+		{kind: "sample.SearchBox"}
+	],
 	components: [
 		{name: "list", kind: "moon.DataList", classes: "enyo-fill", fit: true, controller: ".app.controllers.artists", components: [
 			{kind: "sample.Item", bindFrom: ".name", ontap: "dispatchArtist"}]}

@@ -18,8 +18,7 @@
 		],
 		start: function () {
 			this.inherited(arguments);
-			router.trigger({location: "artists", change: true});
-			this.controllers.artists.fetch();
+			router.trigger({location: "search", change: true});
 		},
 		changePanel: function (root, id, model) {
 			var $panels = this.view.$.panels;
