@@ -13,7 +13,7 @@ enyo.kind({
 	],
 	components: [
 		{name: "albums", kind: "moon.DataList", classes: "enyo-fill", fit: true, components: [
-			{kind: "sample.Item", bindFrom: ".name", ontap: "dispatchAlbum"}]}
+			{kind: "sample.AlbumRow", ontap: "dispatchAlbum"}]}
 	],
 	dispatchAlbum: function (sender, event) {
 		var $row = event.row;

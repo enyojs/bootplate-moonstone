@@ -5,6 +5,7 @@ enyo.depends(
 	"SearchBox.js",
 	"SearchPanel.js",
 	"ArtistPanel.js",
+	"Item.js",
 	"AlbumPanel.js",
-	"Item.js"
+	"AlbumRow.js"
 );
