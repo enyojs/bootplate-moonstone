@@ -1,13 +1,16 @@
-
 enyo.kind({
 	name: "sample.AlbumCollection",
 	kind: "sample.Collection",
-	model: "sample.AlbumModel",
-	url: "/artists/:id/releases",
-	dataKey: "releases",
-	filterData: function (data) {
-		return enyo.filter(data, function (data) {
-			return data.main_release && data.type == "master";
-		});
+	model: "sample.AlbumSearchModel",
+	dataKey: "topalbums.album",
+	buildQueryParams: function (model, options) {
+		var $props = {}, $rel = this.relation.from;
+		$props.method = "artist.getTopAlbums";
+		if ($rel.name) {
+			$props.artist = $rel.name;
+		} else {
+			$props.mbid = $rel.id;
+		}
+		enyo.mixin(options.queryParams, $props);
 	}
 });

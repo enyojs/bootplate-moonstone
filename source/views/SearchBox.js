@@ -9,15 +9,10 @@ enyo.kind({
 	spotlight: false,
 	controller: ".app.controllers.artists",
 	bindings: [
-		{from: ".$.search.value", to: ".controller.searchTerm"},
-		{from: ".controller.more", to: ".$.more.disabled", transform: "disableMore"}
+		{from: ".$.search.value", to: ".controller.searchTerm"}
 	],
 	components: [
 		{kind: "moon.InputDecorator", components: [
-			{name: "search", kind: "moon.Input", placeholder: "Search Artists"}]},
-		{name: "more", kind: "moon.Button", content: "Show More", ontap: "onShowMore", disabled: true}
-	],
-	disableMore: function (value) {
-		return !value;
-	}
+			{name: "search", classes: "search", kind: "moon.Input", placeholder: "Search Artists"}]}
+	]
 });

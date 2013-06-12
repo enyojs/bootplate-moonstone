@@ -3,10 +3,9 @@ enyo.kind({
 	kind: "sample.Item",
 	classes: "album-row",
 	components: [
-		{classes: "name", bindFrom: ".name"},
-		{classes: "year", bindFrom: ".year"},
-		{classes: "label", bindFrom: ".label"},
-		{classes: "format", bindFrom: ".format"},
-		{classes: "country", bindFrom: ".country"}
+		{classes: "rank", bindFrom: ".rank"},
+		{classes: "thumb", components: [
+			{kind: "enyo.Image", bindFrom: ".thumb", bindTo: ".src"}]},
+		{classes: "name", bindFrom: ".name"}
 	]
 });

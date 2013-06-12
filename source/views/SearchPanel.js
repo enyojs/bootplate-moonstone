@@ -2,7 +2,7 @@ enyo.kind({
 	name: "sample.SearchPanel",
 	kind: "sample.Panel",
 	title: "Search",
-	titleBelow: "Using the Discogs API",
+	titleBelow: "Using the last.fm API",
 	headerComponents: [
 		{kind: "sample.SearchBox"}
 	],
@@ -14,7 +14,7 @@ enyo.kind({
 		var $row = event.row;
 		if ($row) {
 			router.set("location", "artist/" + $row.model.get("id"));
+			return true;
 		}
-		return true;
 	}
 });

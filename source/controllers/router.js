@@ -4,7 +4,8 @@ enyo.kind({
 	useHistory: true,
 	triggerOnStart: false,
 	routes: [
-		{default: true, path: "artists", handler: "changePanel", context: ".app"},
-		{path: ":kind/:id", handler: "changeWithData", context: ".app"}
+		{default: true, path: "search", handler: "handleSearch", context: ".app"},
+		{path: "artist/:id", handler: "handleArtist", context: ".app"},
+		{path: "album/:id", handler: "handleAlbum", context: ".app"}
 	]
 });

@@ -1,20 +1,32 @@
 enyo.kind({
 	name: "sample.ArtistModel",
 	kind: "sample.Model",
-	url: "artists",
+	panelName: "artistPanel",
+	dataKey: "artist",
+	buildQueryParams: function (model, options) {
+		var $props = {};
+		$props.method = "artist.getInfo";
+		if (this.name) {
+			$props.name = this.name;
+		} else {
+			$props.mbid = this.id;
+		}
+		enyo.mixin(options.queryParams, $props);
+	},
+	summary: enyo.computed(function () {
+		return this.bio? this.bio.summary: "";
+	}, "bio"),
+	thumb: enyo.computed(function () {
+		return this.image? this.image[1]["#text"]: "";
+	}, "image"),
+	largeImage: enyo.computed(function () {
+		return this.image? this.image[3]["#text"]: "";
+	}, "image"),
 	attributes: {
-		// the id field for this artist in the database
-		id: "id",
-		// the actual name of the artist
+		id: "mbid",
 		name: "name",
-		// real name of the artist if not the name of a band
-		realName: "realname",
-		// the http-clickable link to the artist from the database
-		// website
-		link: "uri",
-		// the images for the artist
-		images: "images",
-		//
+		image: "image",
+		bio: "bio",
 		albums: {
 			relation: {
 				type: "toMany",

@@ -10,26 +10,82 @@
 
 .search-box {
 	padding: 10px;
-	.label {
-		vertical-align: bottom;
-	}
-	&> * {
-		display: inline-block;
+	input.moon-input {
+		text-transform: none;
 	}
 }
 
 .album-row {
+	padding: 15px;
 	&> * {
 		display: inline-block;
-		padding: 2px;
+		vertical-align: middle;
+	}
+	.name {
+	}
+	.rank {
+		width: 50px;
+	}
+	.thumb {
+		width: 50px;
+		img {
+			vertical-align: middle;
+			width: 35px;
+			height: 35px;
+		}
+	}
+}
+
+.track-row {
+	padding: 15px;
+	&> * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.position {
+		width: 50px;
 	}
 	.name {
 		width: 400px;
 	}
-	.year {
-		width: 90px;
+	.duration {
+		
 	}
-	.label {
-		width: 400px;
+}
+
+.artist-header {
+	&> * {
+		display: inline-block;
+	}
+	.artist-bio {
+		font-size: 16px;
+		width: 50%;
+	}
+	.artist-image {
+		padding: 5px;
+		img {
+			width: 200px;
+			height: 200px;
+		}
+	}
+}
+
+.loader {
+	box-sizing: border-box;
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	top: -200px;
+	left: 50%;
+	margin-left: -150px;
+	padding: 15px;
+	-webkit-transition: top 100ms;
+	text-align: center;
+	h2 {
+		font-size: 30px;
+	}
+	&.loading {
+		top: 0;
+		-webkit-transition: top 100ms;
 	}
 }

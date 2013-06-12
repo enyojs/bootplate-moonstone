@@ -5,6 +5,7 @@ enyo.depends(
 	"ArtistSearch.js",
 	"ArtistCollection.js",
 	"Album.js",
+	"AlbumSearch.js",
 	"AlbumCollection.js",
 	"Track.js",
 	"TrackCollection.js"

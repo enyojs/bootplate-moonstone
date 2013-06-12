@@ -15,6 +15,8 @@ enyo.kind({
 		return false;
 	},
 	onSpotlightPanelLeave: function(sender, event) {
+		// TODO: This is being called a minimum of 3 times for each
+		// attempt to leave a panel...
 		if (event.direction === "LEFT") {
 			router.back();
 			return true;

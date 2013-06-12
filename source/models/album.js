@@ -1,26 +1,32 @@
 enyo.kind({
 	name: "sample.AlbumModel",
 	kind: "sample.Model",
-	url: "/releases",
-	create: function () {
-		this.inherited(arguments);
-		this.fetch();
+	panelName: "albumPanel",
+	dataKey: "album",
+	buildQueryParams: function (model, options) {
+		var $props = {};
+		$props.method = "album.getInfo";
+		if (this.artist && this.name) {
+			$props.artist = this.artist;
+			$props.album = this.name;
+		} else {
+			$props.mbid = this.id;
+		}
+		enyo.mixin(options.queryParams, $props);
 	},
+	cover: enyo.computed(function () {
+		return this.image? this.image[3]["#text"]: "";
+	}, "image"),
 	attributes: {
-		id: "id",
-		name: "title",
-		link: "uri",
-		image: "thumb",
-		label: "label",
-		year: "year",
+		id: "mbid",
+		name: "name",
+		image: "image",
+		released: "releasedate",
 		artist: "artist",
-		country: "country",
-		format: "format",
 		tracks: {
 			relation: {
 				type: "toMany",
-				collection: "sample.TrackCollection",
-				autoFetch: true
+				collection: "sample.TrackCollection"
 			}
 		}
 	}
