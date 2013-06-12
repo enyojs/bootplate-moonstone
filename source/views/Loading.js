@@ -1,3 +1,5 @@
+// TODO: Currently this only works in webkit and uses CSS transitions
+// but should this ultimately use an animator
 enyo.kind({
 	name: "sample.Loading",
 	kind: "enyo.View",

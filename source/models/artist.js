@@ -3,6 +3,8 @@ enyo.kind({
 	kind: "sample.Model",
 	panelName: "artistPanel",
 	dataKey: "artist",
+	// our api relies on the query string so we build the correct
+	// options for this type of model
 	buildQueryParams: function (model, options) {
 		var $props = {};
 		$props.method = "artist.getInfo";

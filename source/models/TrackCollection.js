@@ -1,6 +1,6 @@
 enyo.kind({
 	name: "sample.TrackCollection",
-	kind: "sample.Collection",
+	kind: "enyo.Collection",
 	model: "sample.TrackModel",
 	dataKey: "track"
 });

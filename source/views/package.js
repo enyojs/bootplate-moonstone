@@ -1,7 +1,6 @@
 enyo.depends(
 	"Main.js",
 	"Panels.js",
-	"Panel.js",
 	"SearchBox.js",
 	"SearchPanel.js",
 	"ArtistPanel.js",

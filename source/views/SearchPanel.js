@@ -1,6 +1,6 @@
 enyo.kind({
 	name: "sample.SearchPanel",
-	kind: "sample.Panel",
+	kind: "moon.Panel",
 	title: "Search",
 	titleBelow: "Using the last.fm API",
 	headerComponents: [

@@ -4,6 +4,7 @@ enyo.kind({
 	classes: "main-view moon",
 	components: [
 		{kind: "enyo.Spotlight"},
+		// TODO: Can this be moved to the floatingLayer
 		{name: "loading", kind: "sample.Loading"},
 		{name: "panels", kind: "sample.Panels"}
 	]

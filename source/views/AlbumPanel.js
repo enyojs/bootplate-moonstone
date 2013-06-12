@@ -1,6 +1,6 @@
 enyo.kind({
 	name: "sample.AlbumPanel",
-	kind: "sample.Panel",
+	kind: "moon.Panel",
 	bindings: [
 		{from: ".model.name", to: ".title"},
 		{from: ".model.artist", to: ".titleBelow"},
