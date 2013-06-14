@@ -2,7 +2,6 @@ enyo.kind({
 	name: "sample.ArtistModel",
 	kind: "sample.Model",
 	panelName: "artistPanel",
-	dataKey: "artist",
 	// our api relies on the query string so we build the correct
 	// options for this type of model
 	buildQueryParams: function (model, options) {
@@ -15,26 +14,40 @@ enyo.kind({
 		}
 		enyo.mixin(options.queryParams, $props);
 	},
-	summary: enyo.computed(function () {
-		return this.bio? this.bio.summary: "";
-	}, "bio"),
-	thumb: enyo.computed(function () {
-		return this.image? this.image[1]["#text"]: "";
-	}, "image"),
-	largeImage: enyo.computed(function () {
-		return this.image? this.image[3]["#text"]: "";
-	}, "image"),
+	filterData: function (data) {
+		return data.artist;
+	},
 	attributes: {
-		id: "mbid",
-		name: "name",
-		image: "image",
-		bio: "bio",
-		albums: {
-			relation: {
-				type: "toMany",
-				collection: "sample.AlbumCollection",
-				autoFetch: true
+		id: {
+			remoteKey: "mbid",
+			type: String
+		},
+		name: {
+			type: String
+		},
+		thumb: {
+			type: String,
+			formatter: function (key, value, action, payload) {
+				return payload.image? payload.image[1]["#text"]: "";
 			}
+		},
+		summary: {
+			type: String,
+			formatter: function (key, value, action, payload) {
+				return payload.bio? payload.bio.summary: "";
+			}
+		},
+		largeImage: {
+			type: String,
+			formatter: function (key, value, action, payload) {
+				return payload.image? payload.image[3]["#text"]: "";
+			}
+		},
+		albums: {
+			relation: enyo.toMany({
+				inverseKey: "artist",
+				collection: "sample.AlbumCollection"
+			})
 		}
 	}
 });

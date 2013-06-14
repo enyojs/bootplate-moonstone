@@ -6,8 +6,36 @@ enyo.kind({
 		{name: "router", kind: "sample.Router", global: true},
 		{name: "artists", kind: "sample.ArtistCollection"}
 	],
+	bindings: [
+		{from: "enyo.store.busy", to: ".busy"}
+	],
+	handlers: {
+		onError: "sourceDidError"
+	},
+	popupMessage: "",
+	showPopup: false,
+	busy: false,
+	busyChanged: function () {
+		if (this.busy) {
+			this.set("popupMessage", "Fetching Data");
+			this.set("showPopup", true);
+		} else {
+			this.set("showPopup", false);
+		}
+	},
+	sourceDidError: function (sender, event) {
+		this.set("popupMessage", event.message);
+		this.set("showPopup", true);
+		setTimeout(enyo.bind(this, function () {
+			this.set("showPopup", false);
+		}), 1500);
+		setTimeout(enyo.bind(this, function () {
+			router.set("location", "search");
+		}), 2500);
+	},
 	start: function () {
 		this.inherited(arguments);
+		enyo.store.addDispatchTarget(this);
 		// TODO: Routers can automatically trigger their location (and do
 		// by default) but can't now because they will trigger before the
 		// view is available in most cases, should they be registered such that
@@ -37,7 +65,7 @@ enyo.kind({
 		var $panels = this.view.$.panels;
 		var $ch = $panels.getPanels();
 		if ($ch.length) {
-			$panels.popPanels();
+			$panels.popPanels(1);
 		} else {
 			$panels.pushPanel({kind: sample.SearchPanel});
 		}

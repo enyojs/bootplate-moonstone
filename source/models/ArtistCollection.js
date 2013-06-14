@@ -2,11 +2,10 @@ enyo.kind({
 	name: "sample.ArtistCollection",
 	kind: "enyo.Collection",
 	model: "sample.ArtistSearchModel",
-	dataKey: "results.artistmatches.artist",
 	searchTerm: "",
 	searchTermChanged: function () {
 		if (this.searchTerm.length >= 3) {
-			if (!this.fetching) {
+			if (!this.busy) {
 				this.fetchAndReplace();
 			} else {
 				this.queued = true;
@@ -26,5 +25,8 @@ enyo.kind({
 			artist: this.get("searchTerm"),
 			limit: 10
 		});
+	},
+	filterData: function (data) {
+		return data.results.artistmatches.artist;
 	}
 });

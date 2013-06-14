@@ -5,7 +5,7 @@ enyo.kind({
 	components: [
 		{kind: "enyo.Spotlight"},
 		// TODO: Can this be moved to the floatingLayer
-		{name: "loading", kind: "sample.Loading"},
+		{name: "loading", kind: "sample.Popup"},
 		{name: "panels", kind: "sample.Panels"}
 	]
 });

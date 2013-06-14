@@ -2,8 +2,16 @@ enyo.kind({
 	name: "sample.ArtistSearchModel",
 	kind: "sample.Model",
 	attributes: {
-		id: "mbid",
-		name: "name",
-		thumb: "image_small"
+		id: {
+			remoteKey: "mbid",
+			type: String
+		},
+		name: {
+			type: String
+		},
+		thumb: {
+			remoteKey: "image_small",
+			type: String
+		}
 	}
 });

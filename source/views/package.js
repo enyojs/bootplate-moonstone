@@ -8,5 +8,5 @@ enyo.depends(
 	"AlbumPanel.js",
 	"AlbumRow.js",
 	"TrackRow.js",
-	"Loading.js"
+	"Popup.js"
 );
