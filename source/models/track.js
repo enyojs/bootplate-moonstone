@@ -22,7 +22,7 @@ enyo.kind({
 				return Math.floor(value/60)+":"+("0"+(value%60)).slice(-2);
 			},
 			formatter: function (key, value, action, payload) {
-				return payload.duration? payload.duration: "00:00";
+				return payload.duration? payload.duration: 0;
 			}
 		}
 	}

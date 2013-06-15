@@ -7,5 +7,14 @@ enyo.kind({
 	noUrl: true,
 	// the models each name the panel assigned to them so it can
 	// be easily found and removed/added when necessary
-	panelName: ""
+	panelName: "",
+	/**
+		When an error is encountered during an api request we want to make
+		sure this model is removed from our local store and won't continue
+		to operate normally.
+	*/
+	didFail: function (action, options, result) {
+		this.inherited(arguments);
+		this.destroy();
+	}
 });

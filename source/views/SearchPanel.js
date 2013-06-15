@@ -1,3 +1,8 @@
+/**
+	TODO: This kind should ultimately be replaced by the
+	moon.SearchPanel kind but at the time this was written
+	it was not working at all.
+*/
 enyo.kind({
 	name: "sample.SearchPanel",
 	kind: "moon.Panel",

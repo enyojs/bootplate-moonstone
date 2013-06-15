@@ -12,27 +12,34 @@ enyo.kind({
 	handlers: {
 		onError: "sourceDidError"
 	},
-	popupMessage: "",
-	showPopup: false,
+	
+	// dialog properties
+	dialogTitle: "",
+	dialogMessage: "",
+	dialogShowing: false,
+
 	busy: false,
 	busyChanged: function () {
 		if (this.busy) {
-			this.set("popupMessage", "Fetching Data");
-			this.set("showPopup", true);
+			this.set("dialogTitle", "Working");
+			this.set("dialogMessage", "Talking to last.fm ...");
+			this.set("dialogShowing", true);
 		} else {
-			this.set("showPopup", false);
+			this.set("dialogShowing", false);
 		}
 	},
 	sourceDidError: function (sender, event) {
-		this.set("popupMessage", event.message);
-		this.set("showPopup", true);
+		this.set("dialogTitle", "Oops!");
+		this.set("dialogMessage", event.message);
+		this.set("dialogShowing", true);
 		setTimeout(enyo.bind(this, function () {
-			this.set("showPopup", false);
+			this.set("dialogShowing", false);
 		}), 1500);
 		setTimeout(enyo.bind(this, function () {
-			router.set("location", "search");
+			router.back();
 		}), 2500);
 	},
+	
 	start: function () {
 		this.inherited(arguments);
 		enyo.store.addDispatchTarget(this);
@@ -41,7 +48,9 @@ enyo.kind({
 		// view is available in most cases, should they be registered such that
 		// when an application starts it then goes and wakes the router(s) it
 		// contains
-		if (router.get("location") !== "search") {
+		if (!router.get("location")) {
+			router.set("location", "search");
+		} else if (router.get("location") !== "search") {
 			router.addHistory("search", true);
 		}
 		router.trigger();
@@ -51,8 +60,11 @@ enyo.kind({
 		var idx, pn = model.get("panelName"), $panel;
 		if (($panel = $panels.$[pn])) {
 			$panel.set("model", model);
-			if ((idx = $panel.indexInContainer()) < $panels.getIndex()) {
-				$panels.popPanels(idx-1);
+			idx = $panel.indexInContainer();
+			if (idx > $panels.getIndex()) {
+				$panels.setIndex(idx);
+			} else if (idx < $panels.getIndex()) {
+				$panels.popPanels(idx+1);
 			}
 		} else {
 			if (!$panels.getPanels().length) {
