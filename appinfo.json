@@ -1,0 +1,19 @@
+{
+	"id": "com.yourdomain.enyo-app",
+	"version": "0.0.1",
+	"vendor": "My Company",
+	"type": "web",
+	"main": "index.html",
+	"title": "singlepane",
+	"icon": "icon.png",
+	"uiRevision":2,
+	"onDeviceSource": {
+		"enyo": 			"$enyo-framework/development/enyo",
+		"lib/layout": 		"$enyo-framework/development/lib/layout",
+		"lib/moonstone": 	"$enyo-framework/development/lib/moonstone",
+		"lib/spotlight": 	"$enyo-framework/development/lib/spotlight",
+		"lib/enyo-ilib": 	"$enyo-framework/development/lib/enyo-ilib",
+		"lib/enyo-cordova":	"$enyo-framework/development/lib/enyo-cordova",
+		"lib/enyo-webos": 	"$enyo-framework/development/lib/enyo-webos"
+	}
+}
