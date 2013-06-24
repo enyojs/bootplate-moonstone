@@ -1,10 +1,8 @@
 enyo.kind({
 	name: "sample.MainView",
-	kind: "enyo.View",
-	classes: "main-view moon enyo-unselectable enyo-fit",
+	classes: "moon",
 	components: [
 		{kind: "enyo.Spotlight"},
-		{name: "dialog", kind: "sample.Dialog"},
-		{name: "panels", kind: "sample.Panels"}
+		{name: "list", kind: "sample.List"}
 	]
 });
