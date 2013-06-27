@@ -4,7 +4,7 @@
 	"vendor": "My Company",
 	"type": "web",
 	"main": "index.html",
-	"title": "singlepane",
+	"title": "On Device Enyo Test",
 	"icon": "icon.png",
 	"uiRevision":2,
 	"onDeviceSource": {
