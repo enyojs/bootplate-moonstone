@@ -6,7 +6,7 @@ enyo.depends(
 	// Layout library
 	"$lib/layout",
 	// Internationalization library
-	"$lib/enyo-ilib",
+ 	// "$lib/enyo-ilib",
 	// Moonstone UI library
 	"$lib/moonstone",
 	// Focus support library for TV applications
