@@ -8,7 +8,6 @@ enyo.kind({
 		to: ".title"
 	}],
 	components: [
-		{kind: "enyo.Spotlight"},
 		{content: "Your content here"}
 	],
 	headerComponents: [
