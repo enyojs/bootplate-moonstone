@@ -19,3 +19,9 @@
 [submodule "lib/enyo-ilib"]
 	path = lib/enyo-ilib
 	url = ../enyo-ilib.git
+[submodule "lib/enyo-ilib-core"]
+	path = lib/enyo-ilib-core
+	url = git@github.com:enyojs/enyo-ilib-core.git
+[submodule "lib/enyo-ilib-full"]
+	path = lib/enyo-ilib-full
+	url = git@github.com:enyojs/enyo-ilib-full.git
