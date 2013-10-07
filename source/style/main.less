@@ -6,3 +6,69 @@
 
 .main-view {
 }
+
+/* Repurpsoed from the Sampler app (http://enyojs.com/sampler) */
+
+/*.panels-flickr-item {
+	position: relative;
+	border-bottom: 1px solid #0E0E0E;
+	padding: 12px 16px;
+	background-color: #333333;
+}
+
+.panels-flickr-item.onyx-selected {
+	background-color: MidnightBlue;
+}*/
+
+.panels-flickr-item.selected {
+	background-color: #ff2f7d;
+}
+
+.panels-flickr-title {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	left: 100px;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.panels-flickr-thumbnail {
+	width: 75px;
+	height: 75px;
+}
+
+.panels-flickr-center {
+	margin: auto;
+}
+
+/*.panels-flickr-main {
+	background-color: #333;
+}*/
+
+.panels-flickr-image {
+	box-sizing: border-box;
+	max-height: 90%;
+	max-width: 90%;
+	border: solid 5px #CCC;
+	box-shadow: 1px 1px 5px #999;
+	width: auto;
+	height: auto;
+}
+
+.panels-flickr-image.wide {
+	width: 100%;
+}
+
+
+@media all and (max-width: 800px) {
+	.panels-flickr-image.wide {
+		width: auto;
+	}
+}
+
+.panels-flickr-image.tall {
+	height: 100%;
+}

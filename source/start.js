@@ -1,3 +1,3 @@
 enyo.ready(function () {
-	new MyApp.Application({name: "app"});
+	new Tutorial.Develop.FirstApp.Application({name: "app"});
 });

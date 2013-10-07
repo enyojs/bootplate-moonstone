@@ -1,10 +1,9 @@
 enyo.kind({
-	name: "MyApp.Application",
+	name: "Tutorial.Develop.FirstApp.Application",
 	kind: "enyo.Application",
-	controllers: [{
-		name: "messageController",
-		kind: "enyo.Controller",
-		message: $L("Hello World")
-	}],
-	view: "MyApp.MainView"
+	controllers: [
+		{name: "searchController", kind: "Tutorial.Develop.FirstApp.FlickrSearchController"},
+		{name: "resultCollection", kind: "enyo.Collection"}
+	],
+	view: "Tutorial.Develop.FirstApp.MainView"
 });
