@@ -1,7 +1,7 @@
 enyo.kind({
 	name: "MyApp.Application",
 	kind: "enyo.Application",
-	controllers: [{
+	components: [{
 		name: "messageController",
 		kind: "enyo.Controller",
 		message: $L("Hello World")
