@@ -2,9 +2,8 @@ enyo.kind({
 	name: "MyApp.MainView",
 	kind: "moon.Panel",
 	classes: "moon main-view",
-	controller: ".app.$.messageController",
 	bindings: [{
-		from: ".controller.message",
+		from: ".app.$.messageController.message",
 		to: ".title"
 	}],
 	components: [
