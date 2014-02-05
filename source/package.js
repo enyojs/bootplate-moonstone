@@ -14,13 +14,9 @@ enyo.depends(
 	// CSS/LESS style files
 	"style",
 	// Model and data definitions
-	"models",
-	// Controller kinds for the application(s)
-	"controllers",
+	"data",
 	// View kind definitions
 	"views",
-	// Application kind definitions
-	"apps",
 	// Include our default entry point
-	"start.js"
+	"app.js"
 );
