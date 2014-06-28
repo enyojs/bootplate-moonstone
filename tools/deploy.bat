@@ -5,7 +5,7 @@ REM the folder this script is in (*/bootplate/tools)
 SET TOOLS=%~DP0
 
 REM enyo location
-SET ENYO=%TOOLS%\..\enyo
+SET ENYO=%TOOLS%\..\lib\enyo
 
 REM deploy script location
 SET DEPLOY=%ENYO%\tools\deploy.js

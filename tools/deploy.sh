@@ -4,7 +4,7 @@
 TOOLS=$(cd `dirname $0` && pwd)
 
 # enyo location
-ENYO="$TOOLS/../enyo"
+ENYO="$TOOLS/../lib/enyo"
 
 # deploy script location
 DEPLOY="$ENYO/tools/deploy.js"
