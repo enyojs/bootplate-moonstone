@@ -9,13 +9,13 @@ enyo.depends(
 	//"$lib/enyo-ilib",
 
 	// Layout library
-	"$lib/layout",
+	"$lib/enyo-layout",
 
 	// Moonstone UI library
-	"$lib/moonstone",
+	"$lib/enyo-moonstone",
 
 	// Focus support library for TV applications
-	"$lib/spotlight",
+	"$lib/enyo-spotlight",
 
 	// CSS/LESS style files
 	"style",
