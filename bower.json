@@ -1,0 +1,19 @@
+{
+  "name": "enyo-bootplate-moonstone",
+  "version": "bower-graynorton",
+  "description": "Moonstone app template",
+  "main": "index.html",
+  "private": true,
+  "ignore": [
+    "lib"
+  ],
+  "dependencies": {
+    "enyo-ilib": "enyojs/enyo-ilib#bower-graynorton",
+    "enyo-cordova": "enyojs/enyo-cordova#bower-graynorton",
+    "enyo-webos": "enyojs/enyo-webos#bower-graynorton",
+    "enyo-layout": "enyojs/layout#bower-graynorton",
+    "enyo-moonstone": "enyojs/moonstone#bower-graynorton",
+    "enyo-spotlight": "enyojs/spotlight#bower-graynorton",
+    "enyo": "enyojs/enyo#bower-graynorton"
+  }
+}
