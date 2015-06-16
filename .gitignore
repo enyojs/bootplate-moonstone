@@ -2,3 +2,6 @@
 /build
 /deploy
 /node_modules
+node_modules
+lib
+dist
