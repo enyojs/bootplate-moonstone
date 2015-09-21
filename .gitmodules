@@ -7,9 +7,6 @@
 [submodule "lib/layout"]
 	path = lib/layout
 	url = ../../enyojs/layout.git
-[submodule "enyo"]
-	path = enyo
-	url = ../../enyojs/enyo.git
 [submodule "lib/enyo-cordova"]
 	path = lib/enyo-cordova
 	url = ../../enyojs/enyo-cordova.git
