@@ -1,3 +1,6 @@
+[submodule "lib/enyo"]
+	path = lib/enyo
+	url = ../../enyojs/enyo.git
 [submodule "lib/moonstone"]
 	path = lib/moonstone
 	url = ../../enyojs/moonstone.git
