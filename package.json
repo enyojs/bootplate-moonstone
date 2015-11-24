@@ -1,10 +1,20 @@
 {
-  "name": "enyo-bootplate-moonstone",
+  "name": "bootplate-moonstone",
+  "assets": [
+    "assets/*.ico",
+    "assets/*.png"
+  ],
+  "devAssets": [],
+  "styles": [
+    "src/*.css",
+    "src/*.less"
+  ],
+  "main": "index.js",
+  "moduleDir": "src",
   "version": "0.0.1",
   "description": "An Enyo-based self contained template to build web applications using HTML, CSS and JavaScript.",
   "homepage": "http://enyojs.com/",
   "bugs": "http://jira.enyojs.com/",
-  "main": "index.js",
   "keywords": [],
   "engines": {
     "node": ">=0.10.0"
@@ -26,13 +36,5 @@
     }
   ],
   "scripts": {},
-  "devDependencies": {},
-  "styles": [
-    "src/*.css",
-    "src/*.less"
-  ],
-  "assets": [
-    "assets/*.ico",
-    "assets/*.png"
-  ]
+  "devDependencies": {}
 }
